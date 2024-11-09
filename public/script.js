@@ -86,3 +86,8 @@ function submitData() {
   // Exibir uma mensagem de sucesso
   alert("Dados enviados e arquivo CSV gerado com sucesso!");
 }
+
+// Função para alternar entre os temas claro e escuro
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode"); // Alterna a classe "dark-mode"
+});

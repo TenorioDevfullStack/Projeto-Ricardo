@@ -4,30 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Trabalho</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>Registro de Trabalho</h2>
-    <form id="work-form">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" required /><br /><br />
+    <div class="container">
+      <h2>Registro de Trabalho</h2>
+      <form id="work-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required />
 
-      <label for="phone">Telefone:</label>
-      <input type="tel" id="phone" required /><br /><br />
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" required />
 
-      <label for="address">Endereço:</label>
-      <input type="text" id="address" required /><br /><br />
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" required />
 
-      <label for="daysWorked">Dias trabalhados no mês:</label>
-      <input type="number" id="daysWorked" required /><br /><br />
+        <label for="daysWorked">Dias trabalhados no mês:</label>
+        <input type="number" id="daysWorked" required />
 
-      <label for="totalValue">Valor total dos dias trabalhados:</label>
-      <input type="number" id="totalValue" required /><br /><br />
+        <label for="totalValue">Valor total dos dias trabalhados:</label>
+        <input type="number" id="totalValue" required />
 
-      <label for="workLocation">Local onde trabalhou:</label>
-      <input type="text" id="workLocation" required /><br /><br />
+        <label for="workLocation">Local onde trabalhou:</label>
+        <input type="text" id="workLocation" required />
 
-      <button type="button" onclick="submitData()">Enviar e Baixar CSV</button>
-    </form>
+        <button type="button" onclick="submitData()">Enviar</button>
+      </form>
+
+      <!--<button id="theme-toggle" onclick="toggleTheme()">Alternar Tema</button>-->
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
