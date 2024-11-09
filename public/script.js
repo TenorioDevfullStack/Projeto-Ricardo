@@ -8,20 +8,34 @@ function submitData() {
     workLocation: document.getElementById("workLocation").value,
   };
 
-  fetch("/api/work", {
+  // Substitua pela URL do seu Web App do Google Apps Script
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbwnCnfNdEgqUOyhMraals9aXoNxSUxHEPz16LwJSt4SHtvbFLCs7sjJ23PvckmoIsak/exec"; // URL real do seu script
+
+  // Envia os dados para o Google Apps Script via POST
+  fetch(scriptUrl, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
+    body: new URLSearchParams({
+      name: data.name,
+      phone: data.phone,
+      address: data.address,
+      daysWorked: data.daysWorked,
+      totalValue: data.totalValue,
+      workLocation: data.workLocation,
+    }),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Falha na resposta do servidor");
+      }
+      return response.text(); // Recebe a resposta do servidor como texto
+    })
     .then((data) => {
       alert("Dados enviados com sucesso!");
-      console.log(data);
+      console.log("Resposta do servidor:", data);
     })
     .catch((error) => {
       alert("Erro ao enviar os dados.");
-      console.error("Error:", error);
+      console.error("Erro:", error);
     });
 }
