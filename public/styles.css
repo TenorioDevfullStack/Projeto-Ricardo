@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden; /* Remove o scroll vertical */
+  overflow: auto; /* Remove o scroll vertical */
   transition: background-color 0.3s, color 0.3s;
   background-attachment: fixed;
   text-align: center;
