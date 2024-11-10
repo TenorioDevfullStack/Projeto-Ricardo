@@ -109,8 +109,8 @@ form button:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #333;
-  color: white;
+  background-color: #6a5acd;
+  color: rgb(241, 238, 238);
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -125,26 +125,29 @@ form button:hover {
 
 /* Tema Escuro */
 body.dark-mode {
+  background-image: url("https://github.com/TenorioDevfullStack/Projeto-Ricardo/blob/main/pixel-game-1920-x-1080-background-iwvvi7o2wi7sb67n.jpg?raw=true"); /* Imagem para o tema escuro */
   background-color: #333;
   color: #f4f4f4;
 }
 
 body.dark-mode h2 {
-  color: #90ee90;
+  color: #90ee90; /* Título com cor de destaque */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Tema Escuro */
 body.dark-mode form {
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  color: #f4f4f4; /* Cor do texto dentro do formulário */
 }
 
 body.dark-mode input[type="text"],
 body.dark-mode input[type="tel"],
 body.dark-mode input[type="number"] {
-  background-color: #555;
-  color: #f4f4f4;
-  border: 2px solid #777;
+  background-color: #555; /* Fundo escuro para os campos */
+  color: #f4f4f4; /* Texto claro */
+  border: 2px solid #777; /* Borda visível */
 }
 
 body.dark-mode input[type="text"]:focus,
@@ -155,10 +158,15 @@ body.dark-mode input[type="number"]:focus {
 
 body.dark-mode form button {
   background-color: #666;
+  color: #fff; /* Texto branco no botão */
 }
 
 body.dark-mode form button:hover {
   background-color: #555;
+}
+
+body.dark-mode label {
+  color: #f4f4f4; /* Cor das labels */
 }
 
 /* Responsividade */
